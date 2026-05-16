@@ -8,4 +8,5 @@ import tinario9954.gmail.com.Kutandisa.Model.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
     Optional<Role> findByNome(String nome);
+    boolean existsByNome(String nome);
 }
