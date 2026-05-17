@@ -4,9 +4,11 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import tinario9954.gmail.com.Kutandisa.Enum.RoleNome;
 import tinario9954.gmail.com.Kutandisa.Model.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
-    Optional<Role> findByNome(String nome);
-    boolean existsByNome(String nome);
+
+    Optional<Role> findByNome(RoleNome nome);   // ← RoleNome, NÃO String
+    boolean existsByNome(RoleNome nome);         // ← RoleNome, NÃO String
 }

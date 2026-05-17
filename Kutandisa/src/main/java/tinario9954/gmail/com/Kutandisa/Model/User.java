@@ -17,29 +17,29 @@ import lombok.Setter;
 @Entity
 @Table(name = "users")
 public class User {
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+ 
+    @Column(nullable = false)
     private String nomeCompleto;
-
+ 
     @Column(unique = true, nullable = false)
     private String email;
-
+ 
+    @Column(unique = true)
     private String telefone;
-
+ 
     @Column(nullable = false)
     private String password;
-
+ 
     private String fotoPerfil;
-
+ 
+    @Column(nullable = false)
     private Boolean activo = true;
-
+ 
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_id", nullable = false)
     private Role role;
-    
-
-    
-
 }

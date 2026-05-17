@@ -1,9 +1,15 @@
 package tinario9954.gmail.com.Kutandisa.DTOS.auth;
 
 public record AuthResponseDTO(
-        Long userId,
+        String token,
+        String tipo,
+        Long id,
         String nomeCompleto,
         String email,
-        String role,
-        String token
-) {}
+        String role
+) {
+    public AuthResponseDTO(String token, Long id, String nomeCompleto, String email, String role) {
+        this(token, "Bearer", id, nomeCompleto, email, role);
+    }
+}
+ 
