@@ -1,344 +1,1292 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!DOCTYPE html>
+<html lang="pt">
 
-<style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kutandisa o Futuro — Turismo Angola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: block;
-    height: 100dvh;
-  }
-
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--electric-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3) {
-    --pill-accent: var(--french-violet);
-  }
-
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5),
-  .pill-group .pill:nth-child(6n + 6) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
-</style>
-
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 982 239"
-        fill="none"
-        class="angular-logo"
-      >
-        <g clip-path="url(#a)">
-          <path
-            fill="url(#b)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-          <path
-            fill="url(#c)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-        </g>
-        <defs>
-          <radialGradient
-            id="c"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientTransform="rotate(118.122 171.182 60.81) scale(205.794)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#FF41F8" />
-            <stop offset=".707" stop-color="#FF41F8" stop-opacity=".5" />
-            <stop offset="1" stop-color="#FF41F8" stop-opacity="0" />
-          </radialGradient>
-          <linearGradient
-            id="b"
-            x1="0"
-            x2="982"
-            y1="192"
-            y2="192"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F0060B" />
-            <stop offset="0" stop-color="#F0070C" />
-            <stop offset=".526" stop-color="#CC26D5" />
-            <stop offset="1" stop-color="#7702FF" />
-          </linearGradient>
-          <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
-        </defs>
-      </svg>
-      <h1>Hello, {{ title() }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'Prompt and best practices for AI', link: 'https://angular.dev/ai/develop-with-ai'},
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-        ]; track item.title) {
-          <a
-            class="pill"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>{{ item.title }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="14"
-              viewBox="0 -960 960 960"
-              width="14"
-              fill="currentColor"
-            >
-              <path
-                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-              />
-            </svg>
-          </a>
+    <style>
+        /* ── Reset & base ─────────────────────────────────── */
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-      </div>
-      <div class="social-links">
-        <a
-          href="https://github.com/angular/angular"
-          aria-label="Github"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Github"
-          >
-            <path
-              d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z"
-            />
-          </svg>
+        
+         :root {
+            --c-navy: #0A1628;
+            --c-red: #CC2229;
+            --c-gold: #F5A623;
+            --c-white: #FFFFFF;
+            --c-off: #F4F1EC;
+            --c-muted: #6B6257;
+            --c-border: rgba(10, 22, 40, .12);
+            --font-disp: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', system-ui, sans-serif;
+            --ease-out: cubic-bezier(.22, 1, .36, 1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--c-white);
+            color: var(--c-navy);
+            overflow-x: hidden;
+        }
+        
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* ── Utility ──────────────────────────────────────── */
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+        }
+        /* ── TOP-BAR ──────────────────────────────────────── */
+        
+        .top-bar {
+            background: var(--c-navy);
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 0 40px;
+            height: 40px;
+        }
+        
+        .top-bar a {
+            color: rgba(255, 255, 255, .75);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color .2s;
+        }
+        
+        .top-bar a:hover {
+            color: var(--c-gold);
+        }
+        
+        .top-bar a svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+        /* ── PRIMARY NAV ──────────────────────────────────── */
+        
+        .primary-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--c-white);
+            border-bottom: 1.5px solid var(--c-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 68px;
+        }
+        
+        .nav-logo {
+            font-family: var(--font-disp);
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--c-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-logo .flag {
+            width: 32px;
+            height: 22px;
+            border-radius: 3px;
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        
+        .nav-logo .flag .f-top {
+            background: #CC0000;
+        }
+        
+        .nav-logo .flag .f-bot {
+            background: #000;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--c-navy);
+            letter-spacing: .02em;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: border-color .2s, color .2s;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--c-red);
+            border-color: var(--c-red);
+        }
+        
+        .nav-cta {
+            background: var(--c-red);
+            color: var(--c-white);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 22px;
+            border-radius: 4px;
+            letter-spacing: .04em;
+            transition: background .2s, transform .15s;
+        }
+        
+        .nav-cta:hover {
+            background: #a81820;
+            transform: translateY(-1px);
+        }
+        /* ── HERO ─────────────────────────────────────────── */
+        
+        .hero {
+            position: relative;
+            height: 100svh;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10, 22, 40, .15) 0%, rgba(10, 22, 40, .05) 40%, rgba(10, 22, 40, .75) 80%, rgba(10, 22, 40, .95) 100%), url('https://images.unsplash.com/photo-1589200021344-18e8fe72a6e8?w=1920&q=80') center/cover no-repeat;
+            animation: heroZoom 18s ease-out forwards;
+        }
+        
+        @keyframes heroZoom {
+            from {
+                transform: scale(1.08);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 60px 80px;
+            animation: heroFade .9s var(--ease-out) .3s both;
+        }
+        
+        @keyframes heroFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: var(--c-gold);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 1.5px;
+            background: var(--c-gold);
+        }
+        
+        .hero-title {
+            font-family: var(--font-disp);
+            font-size: clamp(54px, 8vw, 110px);
+            font-weight: 900;
+            line-height: .95;
+            color: var(--c-white);
+            margin-bottom: 36px;
+            max-width: 800px;
+        }
+        
+        .hero-title em {
+            font-style: normal;
+            color: var(--c-gold);
+        }
+        
+        .hero-ai-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-ai-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .6);
+            flex-shrink: 0;
+        }
+        
+        .ai-btn {
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: var(--c-white);
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: background .2s, border-color .2s, transform .15s;
+            backdrop-filter: blur(8px);
+        }
+        
+        .ai-btn:hover {
+            background: rgba(255, 255, 255, .22);
+            border-color: rgba(255, 255, 255, .6);
+            transform: translateY(-2px);
+        }
+        /* scroll indicator */
+        
+        .scroll-hint {
+            position: absolute;
+            bottom: 32px;
+            right: 60px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, .5);
+            font-size: 11px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            z-index: 2;
+            writing-mode: vertical-rl;
+            animation: heroFade 1s var(--ease-out) 1.2s both;
+        }
+        
+        .scroll-hint::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 48px;
+            background: rgba(255, 255, 255, .35);
+            animation: scrollBar 1.6s ease-in-out infinite;
+        }
+        
+        @keyframes scrollBar {
+            0%,
+            100% {
+                opacity: .35;
+                transform: scaleY(1) translateY(0);
+            }
+            50% {
+                opacity: .8;
+                transform: scaleY(.6) translateY(6px);
+            }
+        }
+        /* ── INTRO STRIP ──────────────────────────────────── */
+        
+        .intro-strip {
+            background: var(--c-off);
+            padding: 80px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .intro-strip .left p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--c-muted);
+            max-width: 500px;
+        }
+        
+        .intro-strip .right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .strip-heading {
+            font-family: var(--font-disp);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--c-navy);
+            line-height: 1.25;
+        }
+        
+        .strip-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--c-red);
+            border-bottom: 1.5px solid var(--c-red);
+            padding-bottom: 2px;
+            width: fit-content;
+            transition: gap .2s;
+        }
+        
+        .strip-link:hover {
+            gap: 16px;
+        }
+        
+        .strip-link svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+        /* ── ORIGINALS CARDS (fullscreen stack) ───────────── */
+        
+        .originals-section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .original-card {
+            position: relative;
+            height: 100svh;
+            min-height: 560px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+        
+        .original-card .card-bg {
+            position: absolute;
+            inset: 0;
+            transition: transform .8s var(--ease-out);
+        }
+        
+        .original-card:hover .card-bg {
+            transform: scale(1.04);
+        }
+        
+        .original-card .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 22, 40, .92) 0%, rgba(10, 22, 40, .4) 55%, rgba(10, 22, 40, .1) 100%);
+        }
+        
+        .original-card .card-body {
+            position: relative;
+            z-index: 2;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: flex-end;
+            width: 100%;
+        }
+        
+        .card-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: var(--c-gold);
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-family: var(--font-disp);
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 900;
+            color: var(--c-white);
+            line-height: 1.05;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .card-desc {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, .75);
+            max-width: 480px;
+            margin-bottom: 32px;
+        }
+        
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--c-red);
+            color: var(--c-white);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            padding: 14px 28px;
+            border-radius: 3px;
+            transition: background .2s, gap .2s;
+        }
+        
+        .card-cta:hover {
+            background: #a81820;
+            gap: 16px;
+        }
+        
+        .card-cta svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .card-counter {
+            font-family: var(--font-disp);
+            font-size: 80px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, .08);
+            line-height: 1;
+            user-select: none;
+        }
+        /* card backgrounds using free Unsplash images */
+        
+        .card-bg-1 {
+            background: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920&q=80') center/cover no-repeat;
+        }
+        
+        .card-bg-2 {
+            background: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1920&q=80') center/cover no-repeat;
+        }
+        
+        .card-bg-3 {
+            background: url('https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=1920&q=80') center/cover no-repeat;
+        }
+        
+        .card-bg-4 {
+            background: url('https://images.unsplash.com/photo-1562789209-7f462e2cdcdc?w=1920&q=80') center/cover no-repeat;
+        }
+        /* ── DESTINATIONS GRID ────────────────────────────── */
+        
+        .destinations {
+            background: var(--c-navy);
+            padding: 100px 60px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        
+        .section-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: var(--c-gold);
+            margin-bottom: 14px;
+        }
+        
+        .section-title {
+            font-family: var(--font-disp);
+            font-size: clamp(34px, 4vw, 54px);
+            font-weight: 900;
+            color: var(--c-white);
+            line-height: 1.1;
+        }
+        
+        .see-all {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .5);
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+            padding-bottom: 2px;
+            flex-shrink: 0;
+            transition: color .2s;
+        }
+        
+        .see-all:hover {
+            color: var(--c-gold);
+            border-color: var(--c-gold);
+        }
+        /* Filter tabs */
+        
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, .2);
+            color: rgba(255, 255, 255, .6);
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background .2s, border-color .2s, color .2s;
+        }
+        
+        .tab-btn:hover,
+        .tab-btn.active {
+            background: var(--c-red);
+            border-color: var(--c-red);
+            color: var(--c-white);
+        }
+        
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .dest-card {
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+        }
+        
+        .dest-card.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+        
+        .dest-card .dc-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s var(--ease-out);
+        }
+        
+        .dest-card:hover .dc-img {
+            transform: scale(1.06);
+        }
+        
+        .dest-card .dc-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 22, 40, .85) 0%, transparent 55%);
+        }
+        
+        .dest-card .dc-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+        }
+        
+        .dc-region {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--c-gold);
+            margin-bottom: 6px;
+        }
+        
+        .dc-name {
+            font-family: var(--font-disp);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--c-white);
+            line-height: 1.2;
+        }
+        
+        .dest-card.wide .dc-name {
+            font-size: 28px;
+        }
+        /* dest card images */
+        
+        .dc-img-1 {
+            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center/cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dc-img-2 {
+            background: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80') center/cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dc-img-3 {
+            background: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80') center/cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dc-img-4 {
+            background: url('https://images.unsplash.com/photo-1489493887464-892be6d1daae?w=800&q=80') center/cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dc-img-5 {
+            background: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80') center/cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dc-img-6 {
+            background: url('https://images.unsplash.com/photo-1604999565976-8913ad2ddb37?w=800&q=80') center/cover;
+            width: 100%;
+            height: 100%;
+        }
+        /* ── SCENARIOS (cenário strip) ────────────────────── */
+        
+        .scenarios {
+            background: var(--c-white);
+            padding: 100px 60px;
+        }
+        
+        .scenarios .section-title {
+            color: var(--c-navy);
+        }
+        
+        .scenarios .section-tag {
+            color: var(--c-red);
+        }
+        
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 50px;
+        }
+        
+        .scenario-card {
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 2/3;
+        }
+        
+        .sc-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform .5s var(--ease-out);
+        }
+        
+        .scenario-card:hover .sc-img {
+            transform: scale(1.05);
+        }
+        
+        .scenario-card .sc-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(10, 22, 40, .9) 100%);
+        }
+        
+        .scenario-card .sc-label {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+        }
+        
+        .sc-num {
+            font-family: var(--font-disp);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--c-gold);
+            letter-spacing: .1em;
+            margin-bottom: 8px;
+        }
+        
+        .sc-name {
+            font-family: var(--font-disp);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--c-white);
+            line-height: 1.2;
+        }
+        
+        .sc-img-1 {
+            background-image: url('https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=600&q=80');
+        }
+        
+        .sc-img-2 {
+            background-image: url('https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?w=600&q=80');
+        }
+        
+        .sc-img-3 {
+            background-image: url('https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=600&q=80');
+        }
+        
+        .sc-img-4 {
+            background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&q=80');
+        }
+        /* ── FOOTER ───────────────────────────────────────── */
+        
+        footer {
+            background: var(--c-navy);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 70px 60px 40px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand .brand-name {
+            font-family: var(--font-disp);
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--c-white);
+            margin-bottom: 16px;
+        }
+        
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, .45);
+            max-width: 280px;
+        }
+        
+        .footer-col h4 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--c-gold);
+            margin-bottom: 20px;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul a {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .5);
+            transition: color .2s;
+        }
+        
+        .footer-col ul a:hover {
+            color: var(--c-white);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .07);
+            padding-top: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .footer-bottom p {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .3);
+        }
+        
+        .socials {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .socials a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .5);
+            transition: border-color .2s, color .2s, background .2s;
+        }
+        
+        .socials a:hover {
+            border-color: var(--c-gold);
+            color: var(--c-gold);
+            background: rgba(245, 166, 35, .08);
+        }
+        /* ── SCROLL-REVEAL animation class ───────────────── */
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        
+        @media (max-width: 900px) {
+            .primary-nav {
+                padding: 0 24px;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .hero-content {
+                padding: 0 24px 60px;
+            }
+            .intro-strip {
+                grid-template-columns: 1fr;
+                padding: 60px 24px;
+                gap: 32px;
+            }
+            .original-card .card-body {
+                padding: 32px 24px;
+                grid-template-columns: 1fr;
+            }
+            .card-counter {
+                display: none;
+            }
+            .destinations {
+                padding: 60px 24px;
+            }
+            .dest-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .dest-card.wide {
+                grid-column: span 2;
+            }
+            .scenarios {
+                padding: 60px 24px;
+            }
+            .scenario-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            footer {
+                padding: 50px 24px 30px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── TOP BAR ──────────────────────────────────── -->
+    <div class="top-bar">
+        <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>            Visto e Entrada
         </a>
-        <a
-          href="https://x.com/angular"
-          aria-label="X"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="X"
-          >
-            <path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            />
-          </svg>
+        <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Comércio de Viagens
         </a>
-        <a
-          href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw"
-          aria-label="Youtube"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="29"
-            height="20"
-            viewBox="0 0 29 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Youtube"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"
-            />
-          </svg>
-        </a>
-      </div>
     </div>
-  </div>
-</main>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- ── PRIMARY NAV ─────────────────────────────── -->
+    <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="/" class="nav-logo" aria-label="Página inicial">
+            <div class="flag" aria-hidden="true">
+                <div class="f-top"></div>
+                <div class="f-bot"></div>
+            </div>
+            Turismo Angola
+        </a>
 
+        <ul class="nav-menu" role="list">
+            <li><a href="#">Destinos</a></li>
+            <li><a href="#">Experiências</a></li>
+            <li><a href="#">Angola Originals</a></li>
+            <li><a href="#">Viagens Rodoviárias</a></li>
+            <li><a href="#">Principais Eventos</a></li>
+        </ul>
 
-<router-outlet />
+        <a href="#" class="nav-cta">Planear Viagem</a>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────────────── -->
+    <header class="hero" role="banner">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">Descobre o Extraordinário</p>
+            <h1 class="hero-title">
+                Angola,<br /><em>A Beleza</em><br />Original
+            </h1>
+
+            <div class="hero-ai-row">
+                <span class="hero-ai-label">Ideias com IA</span>
+                <button class="ai-btn">Aventura em família</button>
+                <button class="ai-btn">Vistas incríveis</button>
+                <button class="ai-btn">Rota de carro</button>
+                <button class="ai-btn">Arte e cultura</button>
+            </div>
+        </div>
+
+        <span class="scroll-hint" aria-hidden="true">Explorar</span>
+    </header>
+
+    <main>
+
+        <!-- ── INTRO STRIP ─────────────────────────── -->
+        <section class="intro-strip reveal">
+            <div class="left">
+                <p>
+                    Este é o lugar onde cada viajante traça a sua própria rota — onde as histórias se desenrolam em paragens inesperadas e cada quilómetro revela uma nova conexão com a terra vermelha, o oceano e as pessoas. Seja qual for a viagem que procuras, Angola está
+                    pronta para a tornar inesquecível.
+                </p>
+            </div>
+            <div class="right">
+                <h2 class="strip-heading">A Pensar em Visitar Angola?</h2>
+                <a href="#" class="strip-link">
+          Informações sobre Visto e Entrada
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+            </div>
+        </section>
+
+        <!-- ── ORIGINALS CARDS ─────────────────────── -->
+        <section class="originals-section" aria-label="Angola Originals">
+
+            <!-- Card 1 -->
+            <article class="original-card">
+                <div class="card-bg card-bg-1" aria-hidden="true"></div>
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="card-body">
+                    <div>
+                        <p class="card-tag">Angola Originals</p>
+                        <h2 class="card-title">O Espírito Original de Angola</h2>
+                        <p class="card-desc">
+                            Destinos, histórias e experiências que celebram a identidade única desta nação — da savana às costas atlânticas.
+                        </p>
+                        <a href="#" class="card-cta">
+              Descubra os Originais
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+                    </div>
+                    <span class="card-counter" aria-hidden="true">01</span>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="original-card">
+                <div class="card-bg card-bg-2" aria-hidden="true"></div>
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="card-body">
+                    <div>
+                        <p class="card-tag">Natureza Selvagem</p>
+                        <h2 class="card-title">Parques Nacionais que Surpreendem</h2>
+                        <p class="card-desc">
+                            Do Quiçama ao Cameia — ecossistemas únicos onde os grandes animais africanos voltam a habitar paisagens protegidas.
+                        </p>
+                        <a href="#" class="card-cta">
+              Ver Parques
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+                    </div>
+                    <span class="card-counter" aria-hidden="true">02</span>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="original-card">
+                <div class="card-bg card-bg-3" aria-hidden="true"></div>
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="card-body">
+                    <div>
+                        <p class="card-tag">Cultura e Tradição</p>
+                        <h2 class="card-title">Raízes que Atravessam Gerações</h2>
+                        <p class="card-desc">
+                            Rituais, máscaras, música e gastronomia — um mosaico cultural de mais de quarenta grupos etnolinguísticos.
+                        </p>
+                        <a href="#" class="card-cta">
+              Explorar Cultura
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+                    </div>
+                    <span class="card-counter" aria-hidden="true">03</span>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="original-card">
+                <div class="card-bg card-bg-4" aria-hidden="true"></div>
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="card-body">
+                    <div>
+                        <p class="card-tag">Costa e Oceano</p>
+                        <h2 class="card-title">O Atlântico ao Ritmo de Angola</h2>
+                        <p class="card-desc">
+                            Praias desertas, baías azuis-turquesa e surf de classe mundial — a costa angolana ainda é um segredo por descobrir.
+                        </p>
+                        <a href="#" class="card-cta">
+              Ver Praias
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+                    </div>
+                    <span class="card-counter" aria-hidden="true">04</span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- ── DESTINATIONS GRID ───────────────────── -->
+        <section class="destinations reveal" aria-labelledby="dest-heading">
+            <div class="section-header">
+                <div>
+                    <p class="section-tag">Explora</p>
+                    <h2 class="section-title" id="dest-heading">A Tua Viagem<br />dos Sonhos Começa Aqui</h2>
+                </div>
+                <a href="#" class="see-all">Ver todos os destinos →</a>
+            </div>
+
+            <div class="filter-tabs" role="tablist" aria-label="Filtros de região">
+                <button class="tab-btn active" role="tab">Todas as Regiões</button>
+                <button class="tab-btn" role="tab">Norte</button>
+                <button class="tab-btn" role="tab">Centro</button>
+                <button class="tab-btn" role="tab">Sul</button>
+                <button class="tab-btn" role="tab">Litoral</button>
+                <button class="tab-btn" role="tab">Território</button>
+            </div>
+
+            <div class="dest-grid">
+                <div class="dest-card wide">
+                    <div class="dc-img dc-img-1"></div>
+                    <div class="dc-overlay"></div>
+                    <div class="dc-info">
+                        <p class="dc-region">Capital</p>
+                        <p class="dc-name">Luanda</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dc-img dc-img-2"></div>
+                    <div class="dc-overlay"></div>
+                    <div class="dc-info">
+                        <p class="dc-region">Sul</p>
+                        <p class="dc-name">Namibe</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dc-img dc-img-3"></div>
+                    <div class="dc-overlay"></div>
+                    <div class="dc-info">
+                        <p class="dc-region">Centro</p>
+                        <p class="dc-name">Huambo</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dc-img dc-img-4"></div>
+                    <div class="dc-overlay"></div>
+                    <div class="dc-info">
+                        <p class="dc-region">Norte</p>
+                        <p class="dc-name">Malanje</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dc-img dc-img-5"></div>
+                    <div class="dc-overlay"></div>
+                    <div class="dc-info">
+                        <p class="dc-region">Leste</p>
+                        <p class="dc-name">Moxico</p>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <div class="dc-img dc-img-6"></div>
+                    <div class="dc-overlay"></div>
+                    <div class="dc-info">
+                        <p class="dc-region">Litoral</p>
+                        <p class="dc-name">Benguela</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SCENARIOS ───────────────────────────── -->
+        <section class="scenarios reveal" aria-labelledby="sc-heading">
+            <p class="section-tag">Experiências</p>
+            <div class="section-header" style="align-items:flex-start; margin-bottom:0">
+                <h2 class="section-title" id="sc-heading">Que Tipo de<br />Viajante és Tu?</h2>
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-card">
+                    <div class="sc-img sc-img-1"></div>
+                    <div class="sc-overlay"></div>
+                    <div class="sc-label">
+                        <p class="sc-num">01 — Cenário</p>
+                        <p class="sc-name">Aventura na Savana</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="sc-img sc-img-2"></div>
+                    <div class="sc-overlay"></div>
+                    <div class="sc-label">
+                        <p class="sc-num">02 — Cenário</p>
+                        <p class="sc-name">Costa Atlântica</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="sc-img sc-img-3"></div>
+                    <div class="sc-overlay"></div>
+                    <div class="sc-label">
+                        <p class="sc-num">03 — Cenário</p>
+                        <p class="sc-name">Vivência Cultural</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="sc-img sc-img-4"></div>
+                    <div class="sc-overlay"></div>
+                    <div class="sc-label">
+                        <p class="sc-num">04 — Cenário</p>
+                        <p class="sc-name">Deserto do Namib</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────── -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <p class="brand-name">Turismo Angola</p>
+                <p>
+                    O portal oficial de turismo de Angola — inspirando visitantes de todo o mundo a descobrir a beleza original de África.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Destinos</h4>
+                <ul>
+                    <li><a href="#">Luanda</a></li>
+                    <li><a href="#">Namibe</a></li>
+                    <li><a href="#">Benguela</a></li>
+                    <li><a href="#">Malanje</a></li>
+                    <li><a href="#">Cabinda</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="#">Parques Nacionais</a></li>
+                    <li><a href="#">Praias</a></li>
+                    <li><a href="#">Cultura</a></li>
+                    <li><a href="#">Gastronomia</a></li>
+                    <li><a href="#">Eventos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Planear</h4>
+                <ul>
+                    <li><a href="#">Visto e Entrada</a></li>
+                    <li><a href="#">Como Chegar</a></li>
+                    <li><a href="#">Alojamento</a></li>
+                    <li><a href="#">Transportes</a></li>
+                    <li><a href="#">Segurança</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Turismo Angola. Todos os direitos reservados.</p>
+            <div class="socials" aria-label="Redes sociais">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="YouTube">YT</a>
+                <a href="#" aria-label="TikTok">TK</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── SCRIPTS ─────────────────────────────────── -->
+    <script>
+        /* Scroll-reveal */
+        const revealEls = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    io.unobserve(e.target);
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+        revealEls.forEach(el => io.observe(el));
+
+        /* Filter tabs */
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        /* Nav shadow on scroll */
+        const nav = document.querySelector('.primary-nav');
+        window.addEventListener('scroll', () => {
+            nav.style.boxShadow = window.scrollY > 10 ?
+                '0 2px 24px rgba(10,22,40,.1)' : '';
+        }, {
+            passive: true
+        });
+    </script>
+
+</body>
+
+</html>
